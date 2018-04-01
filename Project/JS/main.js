@@ -1,16 +1,22 @@
-var view = (function(boardElement) {
+var view = function(boardElement) {
 	function BoardView(boardElement) {
 		this.boardElement = boardElement;
 		this.buttons = boardElement.children;
-		this.attachListeners();
+    this.attachListeners();  
+    
+
 	}
 	BoardView.prototype.attachListeners = function() {
+    //this.userSequence = [];  
 		for (var i = 0; i < this.buttons.length; i++) {
-			this.buttons[i].addEventListener('click', this.clickButton);
-		}
+      this.buttons[i].addEventListener('click', this.clickButton()); 
+      //this.userSequence.push(this.buttons[i]);   
+      //console.log("hola push"+ this.userSequence); 
+    }
+
 	};
 	BoardView.prototype.clickButton = function() {
-		console.log('botton click!');
+    console.log('botton click!');
 	};
 	BoardView.prototype.lightButton = function(position) {
 		this.buttons[position].style.backgroundColor = 'gray';
@@ -40,9 +46,9 @@ var view = (function(boardElement) {
 	var boardElement = document.querySelector('.board');
 	var view = new BoardView(boardElement);
 	var API = {
-		playSecuence: view.playSecuence.bind(view)
+    playSecuence: view.playSecuence.bind(view),
   
   };
 	return API;
-})();
+}();
 view.playSecuence([ 0, 1, 0 ]);
