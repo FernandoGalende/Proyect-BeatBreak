@@ -1,0 +1,94 @@
+INSTRUCCIONES DE IMPRESIÓN DE ADOBE INDESIGN PARA EL INFORME DEL PROVEEDOR DE SERVICIOS
+
+NOMBRE DEL DOCUMENTO: BeatBreak.indd
+
+FECHA DEL PAQUETE: 31/3/18 13:02
+Fecha de creación: 31/3/18
+Fecha de modificación: 31/3/18
+
+INFORMACIÓN DE CONTACTO
+
+Nombre de la empresa: 
+Contacto: 
+Dirección: 
+
+
+
+
+
+Teléfono: 
+Fax: 
+Correo electrónico: 
+
+INSTRUCCIONES ESPECIALES Y OTRAS NOTAS
+
+
+
+
+
+
+Plugins externos 0
+Objetos no opacos: En la páginaMT, 1, 2
+
+FUENTES
+5 fuente(s) utilizada(s); 0 No disponibles, 0 Incrustado, 0 incompleta(s), 0 protegida(s)
+
+Fuentes empaquetadas
+- Nombre: HelveticaNeueLTStd-BdOu; Tipo: OpenType Type 1, Estado: OK
+- Nombre: StolzlDisplay-Medium; Tipo: OpenType Type 1, Estado: OK
+- Nombre: StolzlDisplay-Normal; Tipo: OpenType Type 1, Estado: OK
+- Nombre: Union-Bold; Tipo: OpenType Type 1, Estado: OK
+- Nombre: VenusSB-BolExt; Tipo: Type 1, Estado: OK
+
+
+COLORES Y TINTAS
+4 tinta(s) de cuatricromía; 0 tinta(s) plana(s)
+
+- Nombre y tipo: Cian de cuatricromía; Ángulo: 0,000; Líneas/pulgada: 0,000
+- Nombre y tipo: Magenta de cuatricromía; Ángulo: 0,000; Líneas/pulgada: 0,000
+- Nombre y tipo: Amarillo de cuatricromía; Ángulo: 0,000; Líneas/pulgada: 0,000
+- Nombre y tipo: Negro de cuatricromía; Ángulo: 0,000; Líneas/pulgada: 0,000
+
+
+VÍNCULOS E IMÁGENES
+(Sólo vínculos incrustados y que faltan)
+Vínculos e imágenes: 2 vínculo(s) encontrado(s); 0 modificado(s), 0 No disponibles 0 inaccesible(s)
+Imágenes: 0 Incrustado, 2 con espacio de color RGB
+
+
+CONFIGURACIÓN DE IMPRESIÓN
+PPD: N/D, (Canon MG6800 series 2)
+Imprimir en: Impresora
+Número de copias: 1
+Páginas enfrentadas: No
+Páginas pares/impares: Ambas
+Páginas: Todas
+Prueba: No
+Mosaico: Ninguno
+Escala: 100%, 100%
+Posición de la página: Superior izquierda
+Imprimir capas: Capas visibles, imprimibles
+Marcas de impresión: Ninguna
+Sangrado: 0 px, 0 px, 0 px, 0 px
+Color: RGB compuesto
+Modo de reventado: Ninguno
+Enviar datos de la imagen: Submuestreo optimizado
+Sustitución de imagen OPI/DCS: No
+Tamaño de página: 1280 x 800
+Dimensiones del papel: 595,28 px x 841,89 px
+Orientación: Apaisado
+Negativo: No
+Modo de volteo: Desactivado
+
+
+LISTA DEL PAQUETE DE ARCHIVOS
+
+1. BeatBreak.indd; tipo: Documento de Adobe InDesign; tamaño: 2528K
+2. BeatBreak.idml; tipo: Documento InDesign Markup; tamaño: 96K
+3. BeatBreak.pdf; tipo: Documento Adobe Acrobat; tamaño: 413K
+4. HelveticaNeueLTStd-BdOu.otf; tipo: Archivo de fuentes; tamaño: 38K
+5. Stolzl Display Medium.otf; tipo: Archivo de fuentes; tamaño: 74K
+6. Stolzl Display Normal.otf; tipo: Archivo de fuentes; tamaño: 74K
+7. union_bold.otf; tipo: Archivo de fuentes; tamaño: 47K
+8. VenusSBBolExt; tipo: Archivo de fuentes; tamaño: 0K
+9. VenusSB-BolExt; tipo: Archivo de fuentes; tamaño: 0K
