@@ -37,5 +37,5 @@ var board = function(sequence) {
     
   }
   return API;
-}([0, 0, 0]);
-console.log(board.checkSequence([0, 1, 0]));
+}([0, 0, 1, 1, 4 ,3 ,4, 2, 3, 2, 1]);
+console.log(board.checkSequence(3));
