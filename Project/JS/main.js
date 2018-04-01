@@ -2,14 +2,18 @@ var view = function(boardElement) {
 	function BoardView(boardElement) {
 		this.boardElement = boardElement;
 		this.buttons = boardElement.children;
-    this.attachListeners();  
-    
-
-	}
+    this.attachListeners();   
+  }
+  
 	BoardView.prototype.attachListeners = function() {
+    var functionGenerator = function (i){
+      return function() {
+        console.log('botton click!'+i);
+      }
+    }
     //this.userSequence = [];  
 		for (var i = 0; i < this.buttons.length; i++) {
-      this.buttons[i].addEventListener('click', this.clickButton()); 
+      this.buttons[i].addEventListener('click', functionGenerator(i)); 
       //this.userSequence.push(this.buttons[i]);   
       //console.log("hola push"+ this.userSequence); 
     }
