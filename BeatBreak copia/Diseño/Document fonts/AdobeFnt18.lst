@@ -1,0 +1,138 @@
+%!Adobe-FontList 1.18
+%Locale:0x409
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:Type1
+FontName:StolzlDisplay-Normal
+FamilyName:Stolzl Display
+StyleName:Normal
+MenuName:Stolzl Display Normal
+StyleBits:0
+WeightClass:400
+WidthClass:5
+AngleClass:0
+FullName:Stolzl Display Normal
+WritingScript:Roman
+OutlineFileName:\Stolzl Display Normal.otf
+DataFormat:sfntData
+UsesStandardEncoding:yes
+isCFF:yes
+hasSVG:no
+FileLength:76576
+FileModTime:1449958572
+NameArray:0,Mac,4,Stolzl Display Normal
+NameArray:0,Win,1,Stolzl Display Normal
+NameArray:0,Win,16,Stolzl Display
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:Suitcase
+FontName:VenusSB-BolExt
+OutlineFileName:\VenusSB-BolExt
+ResourceID:7954
+MacStyle:0
+FileLength:11140
+FileModTime:315568800
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:Type1
+FontName:Union-Bold
+FamilyName:Union
+StyleName:Bold
+MenuName:Union
+StyleBits:2
+WeightClass:700
+WidthClass:5
+AngleClass:0
+FullName:Union Bold
+WritingScript:Roman
+OutlineFileName:\union_bold.otf
+DataFormat:sfntData
+UsesStandardEncoding:yes
+isCFF:yes
+hasSVG:no
+FileLength:48300
+FileModTime:1317111506
+NameArray:0,Mac,4,Union Bold
+NameArray:0,Win,1,Union
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:Type1
+FontName:VenusSB-BolExt
+FamilyName:VenusSB-BolExt
+StyleName:Bold Extended
+MenuName:Venus Bold Extended
+StyleBits:2
+WeightClass:700
+WidthClass:7
+AngleClass:0
+FullName:Venus Bold Extended
+WritingScript:Roman
+OutlineFileName:\VenusSBBolExt
+DataFormat:POSTResource
+UsesStandardEncoding:yes
+isCFF:no
+hasSVG:no
+FileLength:29872
+FileModTime:315568800
+DesignSize:-1
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:Type1
+FontName:HelveticaNeueLTStd-BdOu
+FamilyName:Helvetica Neue LT Std
+StyleName:75 Bold Outline
+MenuName:HelveticaNeueLT Std Bold Outln
+StyleBits:0
+WeightClass:700
+WidthClass:5
+AngleClass:0
+FullName:Helvetica Neue LT Std 75 Bold Outline
+WritingScript:Roman
+OutlineFileName:\HelveticaNeueLTStd-BdOu.otf
+DataFormat:sfntData
+UsesStandardEncoding:yes
+isCFF:yes
+hasSVG:no
+FileLength:39648
+FileModTime:1294853342
+DesignSize:180
+NameArray:0,Mac,18,HelveticaNeueLT Std Bold Outln
+NameArray:0,Mac,4,Helvetica Neue LT Std 75 Bold Outline
+NameArray:0,Win,1,HelveticaNeueLT Std Bold Outln
+NameArray:0,Win,16,Helvetica Neue LT Std
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:Type1
+FontName:StolzlDisplay-Medium
+FamilyName:Stolzl Display
+StyleName:Medium
+MenuName:Stolzl Display Medium
+StyleBits:0
+WeightClass:500
+WidthClass:5
+AngleClass:0
+FullName:Stolzl Display Medium
+WritingScript:Roman
+OutlineFileName:\Stolzl Display Medium.otf
+DataFormat:sfntData
+UsesStandardEncoding:yes
+isCFF:yes
+hasSVG:no
+FileLength:75916
+FileModTime:1449958570
+NameArray:0,Mac,4,Stolzl Display Medium
+NameArray:0,Win,1,Stolzl Display Medium
+NameArray:0,Win,16,Stolzl Display
+%EndFont
+
