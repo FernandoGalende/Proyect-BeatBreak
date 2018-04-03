@@ -1,4 +1,3 @@
-
 view.playSequence(board.getLevelSequence());
 
 

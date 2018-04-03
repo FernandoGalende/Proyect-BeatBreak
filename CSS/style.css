@@ -45,6 +45,9 @@ table {
     border-collapse: collapse;
     border-spacing: 0;
 }
+
+
+/*main*/
 .board {
   display: flex;
   flex-wrap: wrap;
@@ -54,8 +57,7 @@ table {
   height: 50vh;
 }
 .board__button--red {
-  background: #ff471a
-  ;
+  background: #ff471a;
 }
 .board__button--blue {
   background: #5251ff;
@@ -66,3 +68,5 @@ table {
 .board__button--yellow {
   background:#8b5342;
 }
+
+

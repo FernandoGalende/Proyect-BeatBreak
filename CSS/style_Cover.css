@@ -1,0 +1,37 @@
+/*cover*/
+
+@font-face {
+  font-family: StolzlDisplay-Medium;
+  src: url(Fonts/StolzlDisplay-Medium) format("woff");
+}
+
+#myVideo {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  min-width: 100%; 
+  min-height: 100%;
+}
+.titulos_cover{
+  width: 100%;
+  height: 90%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: top;
+  align-content: space-between;
+}
+.titulos_cover h1{
+  position: fixed; 
+  width: 100%;
+  height: 10%;
+  margin-top: 0;
+  font-family: StolzlDisplay-Medium;
+  width: 100%;
+  height: 100%;
+  color: rgba(255, 255,255, 0.8);
+  text-align: center;
+  letter-spacing: -10px;
+  font-size:  12rem;
+}
+

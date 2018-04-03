@@ -1,40 +1,35 @@
-var view = function(boardElement) {
+var view = (function(boardElement) {
 	function BoardView(boardElement) {
 		this.boardElement = boardElement;
 		this.buttons = boardElement.children;
-    this.attachListeners();   
-  }
-  
+		this.attachListeners();
+	}
+
 	BoardView.prototype.attachListeners = function() {
-    var functionGenerator = function (i){
-      return function() {
+		var functionGenerator = function(i) {
+			return function() {
 				board.addToUserSequence(i);
-				console.log('botton click!'+ i);
 				board.clicked++;
-				console.log("boardClicked: "+ board.clicked + "boardLevel: " + board.level);
-				if (board.clicked == board.level) {
-					board.clicked=0;
-					console.log("Comprobado numero de clicks");
+				if (board.clicked === board.boardLevel) {
+					board.boardLevel++;
+					board.clicked = 0;
 					board.checkSequence(board.userSequence);
 				}
-      }
-    }
+			};
+		};
 		for (var i = 0; i < this.buttons.length; i++) {
-			this.buttons[i].addEventListener('click', functionGenerator(i));   
+			this.buttons[i].addEventListener('click', functionGenerator(i));
 		}
-
-	
-
 	};
-	// BoardView.prototype.clickButton = function() {
-  //   console.log('botton click!');
-	// };
+
 	BoardView.prototype.lightButton = function(position) {
 		this.buttons[position].style.backgroundColor = 'gray';
 	};
-	 BoardView.prototype.resetButton = function(position) {
-	 	this.buttons[position].removeAttribute('style');
-	 };
+
+	BoardView.prototype.resetButton = function(position) {
+		this.buttons[position].removeAttribute('style');
+	};
+
 	BoardView.prototype.playSequence = function(sequence) {
 		var counter = 0;
 		var iterateSequence = setInterval(
@@ -52,15 +47,13 @@ var view = function(boardElement) {
 				);
 			}.bind(this),
 			1000
-		);		
+		);
 	};
+
 	var boardElement = document.querySelector('.board');
 	var view = new BoardView(boardElement);
 	var API = {
-    playSequence: view.playSequence.bind(view),
-  
-  };
-  return API;
-}();
-
-
+		playSequence: view.playSequence.bind(view)
+	};
+	return API;
+})();
