@@ -2,6 +2,7 @@ var view = (function(boardElement) {
 	function BoardView(boardElement) {
 		this.boardElement = boardElement;
 		this.buttons = boardElement.children;
+		//this.gameOver = document.querySelector("gameOver");
 		this.attachListeners();
 	}
 
@@ -10,6 +11,9 @@ var view = (function(boardElement) {
 			return function() {
 				board.addToUserSequence(i);
 				board.clicked++;
+				console.log("click");
+
+				view.userLightButton(i);
 				if (board.clicked === board.boardLevel) {
 					board.boardLevel++;
 					board.clicked = 0;
@@ -21,13 +25,25 @@ var view = (function(boardElement) {
 			this.buttons[i].addEventListener('click', functionGenerator(i));
 		}
 	};
+	BoardView.prototype.userLightButton = function(position) {		
+		this.buttons[position].classList.add("board__neon___button--dos");
+		setTimeout(function(){
+			this.resetButton(position);
+		}.bind(this),200);
+	};
 
-	BoardView.prototype.lightButton = function(position) {
-		this.buttons[position].style.backgroundColor = 'gray';
+	BoardView.prototype.lightButton = function(position) {		
+		this.buttons[position].classList.add("board__neon___button");
 	};
 
 	BoardView.prototype.resetButton = function(position) {
-		this.buttons[position].removeAttribute('style');
+		this.buttons[position].classList.remove("board__neon___button","board__neon___button--dos");
+	};
+
+	BoardView.prototype.gameOver = function(){
+		console.log('GAME OVER');
+		document.querySelector(".gameOver").classList.remove("hide");
+		
 	};
 
 	BoardView.prototype.playSequence = function(sequence) {
@@ -43,17 +59,18 @@ var view = (function(boardElement) {
 						}
 						counter++;
 					}.bind(this),
-					800
+					50
 				);
 			}.bind(this),
-			1000
+			100
 		);
 	};
 
 	var boardElement = document.querySelector('.board');
 	var view = new BoardView(boardElement);
 	var API = {
-		playSequence: view.playSequence.bind(view)
+		playSequence: view.playSequence.bind(view),
+		gameOver: view.gameOver.bind(view)
 	};
 	return API;
 })();

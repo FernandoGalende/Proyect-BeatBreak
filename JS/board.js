@@ -40,8 +40,8 @@ var board = (function(sequence) {
 				view.playSequence(board.getLevelSequence());
 				result = true;
 			} else if (this.userSequence[i] !== sequence[i]) {
-				result = false;
-				console.log('GAME OVER');
+				result = false;        
+        view.gameOver();
 				break;
 			}
 		}

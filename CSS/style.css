@@ -46,6 +46,15 @@ table {
     border-spacing: 0;
 }
 
+@font-face {
+    font-family: StolzlDisplay-Medium;
+    src: url(Fonts/StolzlDisplay-Medium) format("woff");
+}
+@font-face {
+    font-family: Union-Bold;
+    src: url(Fonts/Union-Bold) format("woff");
+}
+
 
 /*main*/
 .board {
@@ -57,16 +66,131 @@ table {
   height: 50vh;
 }
 .board__button--red {
-  background: #ff471a;
+    background: #5251ff;
+    border: 1px solid white;
+    box-sizing: border-box;
+    
 }
 .board__button--blue {
-  background: #5251ff;
+    background: #5251ff;
+    border: 1px solid white;
+    box-sizing: border-box;
 }
 .board__button--green {
-  background: #00fa6d;
+    background: #5251ff;
+    border: 1px solid white;
+    box-sizing: border-box;
 }
 .board__button--yellow {
-  background:#8b5342;
+    background: #5251ff;
+    border: 1px solid white;
+    box-sizing: border-box;
 }
 
+.gameOver{
+    Position: fixed;
+    background: #ff5000;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-family: Union-Bold;
+    font-size: 20rem;
+    line-height: 20rem;   
+    letter-spacing: -10px; 
+}
+
+.hide{
+    display: none!important;
+}
+
+/*neon1*/
+.board__neon___button {    
+    /* -webkit-animation: neon2 1.5s ease-in-out infinite alternate;
+    -moz-animation: neon2 1.5s ease-in-out infinite alternate;*/
+    animation: neon2 1.5s ease-in-out infinite alternate; 
+    background-color: rgba(200,200,200,0.1);
+}
+
+.board__neon___button--dos {    
+    /* -webkit-animation: neon2 1.5s ease-in-out infinite alternate;
+    -moz-animation: neon2 1.5s ease-in-out infinite alternate;*/
+    animation: neon3 1.5s ease-in-out infinite alternate; 
+    background-color: rgba(255,80,0,0.4);
+}
+
+
+  @-webkit-keyframes neon2 {
+    from {
+      box-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #fff, 0 0 70px #fff, 0 0 80px #fff, 0 0 100px #fff, 0 0 150px #fff;
+    }
+    to {
+      box-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #fff, 0 0 35px #fff, 0 0 40px #fff, 0 0 50px #fff, 0 0 75px #fff;
+    }
+} 
+  /*glow for mozilla*/
+  
+ 
+  @-moz-keyframes neon2 {
+    from {
+      box-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #fff, 0 0 70px #fff, 0 0 80px #fff, 0 0 100px #fff, 0 0 150px #fff;
+    }
+    to {
+      box-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #fff, 0 0 35px #fff, 0 0 40px #fff, 0 0 50px #fff, 0 0 75px #fff;
+    }
+  }
+  
+  
+  /*glow*/
+  
+  
+  
+  @keyframes neon2 {
+    from {
+      box-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #fff, 0 0 70px #fff, 0 0 80px #fff, 0 0 100px #fff, 0 0 150px #fff;
+    }
+    to {
+      box-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #fff, 0 0 35px #fff, 0 0 40px #fff, 0 0 50px #fff, 0 0 75px #fff;
+    }
+  }
+  
+
+  @-webkit-keyframes neon3 {
+    from {
+      box-shadow: 0 0 10px orange, 0 0 20px orange, 0 0 30px orange, 0 0 40px orange, 0 0 70px orange, 0 0 80px orange, 0 0 100px orange, 0 0 150px orange;
+    }
+    to {
+      box-shadow: 0 0 5px orange, 0 0 10px orange, 0 0 15px orange, 0 0 20px orange, 0 0 35px orange, 0 0 40px orange, 0 0 50px orange, 0 0 75px orange;
+    }
+} 
+  /*glow for mozilla*/
+  
+ 
+  @-moz-keyframes neon3 {
+    from {
+      box-shadow: 0 0 10px orange, 0 0 20px orange, 0 0 30px orange, 0 0 40px orange, 0 0 70px orange, 0 0 80px orange, 0 0 100px orange, 0 0 150px orange;
+    }
+    to {
+      box-shadow: 0 0 5px orange, 0 0 10px orange, 0 0 15px orange, 0 0 20px orange, 0 0 35px orange, 0 0 40px orange, 0 0 50px orange, 0 0 75px orange;
+    }
+  }
+  
+  
+  /*glow*/
+  
+  
+  
+  @keyframes neon3 {
+    from {
+      box-shadow: 0 0 10px orange, 0 0 20px orange, 0 0 30px orange, 0 0 40px orange, 0 0 70px orange, 0 0 80px orange, 0 0 100px orange, 0 0 150px orange;
+    }
+    to {
+      box-shadow: 0 0 5px orange, 0 0 10px orange, 0 0 15px orange, 0 0 20px orange, 0 0 35px orange, 0 0 40px orange, 0 0 50px orange, 0 0 75px orange;
+    }
+  }
+  
 
