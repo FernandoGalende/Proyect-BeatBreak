@@ -12,6 +12,11 @@ var view = (function(boardElement) {
 				board.addToUserSequence(i);
 				board.clicked++;
 				console.log("click");
+				var audioArray = ['./Audio/3.mp3','./Audio/3.mp3','./Audio/3.mp3','./Audio/3.mp3'];
+				var a = new Audio()
+				a.src = audioArray[i];
+				console.log("la secuencia es"+i);
+				a.play()
 
 				view.userLightButton(i);
 				if (board.clicked === board.boardLevel) {
@@ -48,9 +53,11 @@ var view = (function(boardElement) {
 
 	BoardView.prototype.playSequence = function(sequence) {
 		var counter = 0;
+		console.log(sequence);
 		var iterateSequence = setInterval(
 			function() {
 				this.lightButton(sequence[counter]);
+		
 				setTimeout(
 					function() {
 						this.resetButton(sequence[counter]);
