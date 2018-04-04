@@ -6,12 +6,12 @@ function BoardLogic(sequence) {
 	this.boardLevel = 1;
 	this.call = false;
 	this.score = 0;
-	this.pepe = false;
+	this.finish = false;
 }
 
 BoardLogic.prototype.randomGame = function() {
 	var sequence = [];
-	for (var i = 0; i < 3; i++) {
+	for (var i = 0; i < 10; i++) {
 		sequence.push(Math.round(Math.random() * 3));
 	}
 	return sequence;

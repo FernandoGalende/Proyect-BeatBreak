@@ -4,21 +4,13 @@ function BoardView(boardElement) {
 	this.screnLevel = 500;
 	this.screnLevelTime = 700;
 	this.iterateSequence;
-	//this.gameOver = document.querySelector("gameOver");
 	this.attachListeners();
 }
 
 BoardView.prototype.startAgain = function(){
-	this.screnLevel-=100;
-	this.screnLevelTime-=70;
-	// board.level = 1;
-	// board.userSequence = [];
-	// board.clicked = 0;
-	// board.boardLevel = 1;
-	// board.call = false;
+	this.screnLevel-=50;
+	this.screnLevelTime-=20;
 	clearInterval(this.iterateSequence);
-	//board = new BoardLogic()
-	//this.playSequence(board.getLevelSequence());
 	board.finish = true;
 }
 
@@ -27,7 +19,6 @@ BoardView.prototype.attachListeners = function() {
 		return function() {
 			board.addToUserSequence(i);
 			board.clicked++;
-
 			var audioArray = [ './assets/Audio/3.mp3', './assets/Audio/3.mp3', './assets/Audio/3.mp3', './assets/Audio/3.mp3'];
 			var a = new Audio();
 			a.src = audioArray[i];
@@ -63,7 +54,6 @@ BoardView.prototype.resetButton = function(position) {
 };
 
 BoardView.prototype.gameOver = function() {
-	console.log('GAME OVER');
 	document.querySelector('.gameOver').classList.remove('hide');
 };
 BoardView.prototype.win = function() {
@@ -72,7 +62,6 @@ BoardView.prototype.win = function() {
 };
 BoardView.prototype.playScore = function() {
 	document.querySelector('.score__number').innerHTML = board.score;
-	console.log(document.querySelector('.score__number'));
 };
 
 BoardView.prototype.playSequence = function(sequence) {
@@ -80,7 +69,6 @@ BoardView.prototype.playSequence = function(sequence) {
 	var iterateSequence = setInterval(
 		function() {
 			this.lightButton(sequence[counter]);
-
 			setTimeout(
 				function() {
 					this.resetButton(sequence[counter]);

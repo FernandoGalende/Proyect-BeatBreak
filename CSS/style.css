@@ -102,9 +102,9 @@ table {
     align-items: center;
     text-align: center;
     font-family: Union-Bold;
-    font-size: 20rem;
-    line-height: 20rem;   
-    letter-spacing: -15px; 
+    font-size: 40vh;
+    line-height: 35vh;   
+    letter-spacing: 0.1vw; 
     z-index: 100;
 }
 .win{
@@ -119,9 +119,9 @@ table {
   align-items: center;
   text-align: center;
   font-family: Union-Bold;
-  font-size: 20rem;
-  line-height: 20rem;   
-  letter-spacing: -20px; 
+  font-size: 40vh;
+  line-height: 35vh;   
+  letter-spacing: 0.1vw; 
   z-index: 100;
 }
 
@@ -142,7 +142,7 @@ table {
     /* -webkit-animation: neon2 1.5s ease-in-out infinite alternate;
     -moz-animation: neon2 1.5s ease-in-out infinite alternate;*/
     animation: neon3 1.5s ease-in-out infinite alternate; 
-    background-color: rgba(255,255,255,1);
+    background-color: rgb(255,69,0);
     border: none;
 }
 
