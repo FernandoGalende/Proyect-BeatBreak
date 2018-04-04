@@ -10,14 +10,12 @@ var view = (function(boardElement) {
 		var functionGenerator = function(i) {
 			return function() {
 				board.addToUserSequence(i);
-				board.clicked++;
-				console.log("click");
+				board.clicked++;	
+					
 				var audioArray = ['./Audio/3.mp3','./Audio/3.mp3','./Audio/3.mp3','./Audio/3.mp3'];
 				var a = new Audio()
 				a.src = audioArray[i];
-				console.log("la secuencia es"+i);
-				a.play()
-
+				a.play();
 				view.userLightButton(i);
 				if (board.clicked === board.boardLevel) {
 					board.boardLevel++;
@@ -49,14 +47,13 @@ var view = (function(boardElement) {
 		console.log('GAME OVER');
 		document.querySelector(".gameOver").classList.remove("hide");		
 	};
-	BoardView.prototype.score = function(){
-		
-			
+	BoardView.prototype.playScore = function(){				
+		document.querySelector(".score__number").innerHTML = board.score;	
+		console.log(document.querySelector(".score__number"));	
 	};
 
 	BoardView.prototype.playSequence = function(sequence) {
 		var counter = 0;
-		console.log(sequence);
 		var iterateSequence = setInterval(
 			function() {
 				this.lightButton(sequence[counter]);
@@ -80,7 +77,8 @@ var view = (function(boardElement) {
 	var view = new BoardView(boardElement);
 	var API = {
 		playSequence: view.playSequence.bind(view),
-		gameOver: view.gameOver.bind(view)
+		gameOver: view.gameOver.bind(view),
+		playScore: view.playScore.bind(view)
 	};
 	return API;
 })();

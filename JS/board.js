@@ -6,9 +6,7 @@ var board = (function(sequence) {
     this.clicked = 0;
     this.boardLevel = 1;
     this.call = false;
-    this.score = 0;
-    
-    
+    this.score = 0;    
 	}
 
 	BoardLogic.prototype.getLevelSequence = function(level) {
@@ -32,6 +30,12 @@ var board = (function(sequence) {
 
 	BoardLogic.prototype.getSequence = function() {
 		return this.getLevelSequence(this.level);
+  };
+  BoardLogic.prototype.addScore = function() {
+    this.score += 17;
+    view.playScore();	
+
+    
 	};
 
 	BoardLogic.prototype.checkSequence = function(userSequence) {
@@ -41,11 +45,10 @@ var board = (function(sequence) {
    
     
 		for (var i = 0; i < this.userSequence.length; i++) {
-			if (this.userSequence[i] == sequence[i]) {
-        
-        this.score += 17;
-        console.log("tu score es "+this.score);
-				view.playSequence(board.getLevelSequence());
+			if (this.userSequence[i] == sequence[i]) {    
+       
+        view.playSequence(board.getLevelSequence());
+        board.addScore();
 				result = true;
 			} else if (this.userSequence[i] !== sequence[i]) {
 				result = false;        
@@ -71,7 +74,9 @@ var board = (function(sequence) {
     level: board.level,
     boardLevel : board.boardLevel,
 		sequence: board.sequence,
-		clicked: board.clicked
+    clicked: board.clicked,
+    addScore: board.addScore.bind(board),
+    score: board.score,
 	};
 
 	return API;
