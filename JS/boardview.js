@@ -47,8 +47,11 @@ var view = (function(boardElement) {
 
 	BoardView.prototype.gameOver = function(){
 		console.log('GAME OVER');
-		document.querySelector(".gameOver").classList.remove("hide");
+		document.querySelector(".gameOver").classList.remove("hide");		
+	};
+	BoardView.prototype.score = function(){
 		
+			
 	};
 
 	BoardView.prototype.playSequence = function(sequence) {

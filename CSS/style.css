@@ -66,24 +66,24 @@ table {
   height: 50vh;
 }
 .board__button--red {
-    background: #5251ff;
-    border: 1px solid white;
+    background: black;
+    border: 1px solid orangered;
     box-sizing: border-box;
     
 }
 .board__button--blue {
-    background: #5251ff;
-    border: 1px solid white;
+    background: black;
+    border: 1px solid orangered;
     box-sizing: border-box;
 }
 .board__button--green {
-    background: #5251ff;
-    border: 1px solid white;
+    background: black;
+    border: 1px solid orangered;
     box-sizing: border-box;
 }
 .board__button--yellow {
-    background: #5251ff;
-    border: 1px solid white;
+    background: black;
+    border: 1px solid orangered;
     box-sizing: border-box;
 }
 
@@ -113,16 +113,26 @@ table {
     /* -webkit-animation: neon2 1.5s ease-in-out infinite alternate;
     -moz-animation: neon2 1.5s ease-in-out infinite alternate;*/
     animation: neon2 1.5s ease-in-out infinite alternate; 
-    background-color: rgba(200,200,200,0.1);
+    background-color: rgba(0,0,0,0.8);
 }
 
 .board__neon___button--dos {    
     /* -webkit-animation: neon2 1.5s ease-in-out infinite alternate;
     -moz-animation: neon2 1.5s ease-in-out infinite alternate;*/
     animation: neon3 1.5s ease-in-out infinite alternate; 
-    background-color: rgba(255,80,0,0.4);
+    background-color: rgba(0,0,0,0.8);
 }
 
+.score{
+    position: fixed;
+    top: 15px;
+    right: 15px;
+    width: auto;
+    height: auto;
+    font-family: Union-Bold;
+    color: rgba(255,255,255,0.8);
+    font-size: 1rem;
+}
 
   @-webkit-keyframes neon2 {
     from {
