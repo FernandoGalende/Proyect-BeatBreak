@@ -3,15 +3,23 @@ function BoardView(boardElement) {
 	this.buttons = boardElement.children;
 	this.screnLevel = 500;
 	this.screnLevelTime = 700;
-
+	this.iterateSequence;
 	//this.gameOver = document.querySelector("gameOver");
 	this.attachListeners();
 }
 
 BoardView.prototype.startAgain = function(){
-	view.screnLevel-=100;
-	view.screnLevelTime-=70;
-	view.playSequence(board.getLevelSequence());
+	this.screnLevel-=100;
+	this.screnLevelTime-=70;
+	// board.level = 1;
+	// board.userSequence = [];
+	// board.clicked = 0;
+	// board.boardLevel = 1;
+	// board.call = false;
+	clearInterval(this.iterateSequence);
+	//board = new BoardLogic()
+	//this.playSequence(board.getLevelSequence());
+	board.finish = true;
 }
 
 BoardView.prototype.attachListeners = function() {

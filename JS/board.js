@@ -1,22 +1,29 @@
 function BoardLogic(sequence) {
-	this.sequence = sequence;
+	this.sequence = this.randomGame();
 	this.level = 1;
 	this.userSequence = [];
 	this.clicked = 0;
 	this.boardLevel = 1;
 	this.call = false;
 	this.score = 0;
+	this.pepe = false;
 }
+
+BoardLogic.prototype.randomGame = function() {
+	var sequence = [];
+	for (var i = 0; i < 3; i++) {
+		sequence.push(Math.round(Math.random() * 3));
+	}
+	return sequence;
+};
 
 BoardLogic.prototype.getLevelSequence = function(level) {
 	if (this.call == false) {
 		var sequenceEnd = this.level;
-		console.log('NIVEL', sequenceEnd);
 		this.call = true;
 		return this.sequence.slice(0, sequenceEnd);
 	} else {
 		var sequenceEnd = this.level + 1;
-		console.log('NIVEL', sequenceEnd);
 		return this.sequence.slice(0, sequenceEnd);
 	}
 };
@@ -39,7 +46,7 @@ BoardLogic.prototype.checkSequence = function(userSequence) {
 	this.clicked = 0;
 	for (var i = 0; i < this.userSequence.length; i++) {
 		if (this.userSequence[i] == sequence[i]) {
-			if (this.userSequence.length === sequence.length) {
+			if (this.userSequence.length === this.sequence.length) {
 				setTimeout(
 					function() {
 						view.win();
@@ -50,15 +57,14 @@ BoardLogic.prototype.checkSequence = function(userSequence) {
 					function() {
 						view.win();
 					}.bind(this),
-					0
+					100
 				);
 				setTimeout(
 					function() {
 						view.startAgain();
 					}.bind(this),
-					2500
+					2600
 				);
-								
 			} else {
 				view.playSequence(board.getLevelSequence());
 				board.addScore();
