@@ -12,7 +12,7 @@ function BoardLogic(sequence) {
 BoardLogic.prototype.randomGame = function() {
 	var sequence = [];
 	for (var i = 0; i < 10; i++) {
-		sequence.push(Math.round(Math.random() * 3));
+		sequence.push(Math.round(Math.random() * 7));
 	}
 	return sequence;
 };

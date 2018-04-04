@@ -62,7 +62,7 @@ table {
   flex-wrap: wrap;
 }
 .board__button {
-  width: 50%;
+  width: 25%;
   height: 50vh;
 }
 .board__button--red {
