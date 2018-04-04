@@ -48,11 +48,11 @@ table {
 
 @font-face {
     font-family: StolzlDisplay-Medium;
-    src: url(Fonts/StolzlDisplay-Medium) format("woff");
+    src: url(../assets/Fonts/StolzlDisplay-Medium) format("woff");
 }
 @font-face {
     font-family: Union-Bold;
-    src: url(Fonts/Union-Bold) format("woff");
+    src: url(../assets/Fonts/Union-Bold) format("woff");
 }
 
 
@@ -86,6 +86,9 @@ table {
     border: 1px solid orangered;
     box-sizing: border-box;
 }
+.board__button--z-index{
+  z-index: 50;
+}
 
 .gameOver{
     Position: fixed;
@@ -101,7 +104,25 @@ table {
     font-family: Union-Bold;
     font-size: 20rem;
     line-height: 20rem;   
-    letter-spacing: -10px; 
+    letter-spacing: -15px; 
+    z-index: 100;
+}
+.win{
+  Position: fixed;
+  background: #ff5000;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-family: Union-Bold;
+  font-size: 20rem;
+  line-height: 20rem;   
+  letter-spacing: -20px; 
+  z-index: 100;
 }
 
 .hide{
@@ -113,25 +134,42 @@ table {
     /* -webkit-animation: neon2 1.5s ease-in-out infinite alternate;
     -moz-animation: neon2 1.5s ease-in-out infinite alternate;*/
     animation: neon2 1.5s ease-in-out infinite alternate; 
-    background-color: rgba(0,0,0,0.8);
+    background-color: rgba(255,255,255,1);
+    border: none;
 }
 
 .board__neon___button--dos {    
     /* -webkit-animation: neon2 1.5s ease-in-out infinite alternate;
     -moz-animation: neon2 1.5s ease-in-out infinite alternate;*/
     animation: neon3 1.5s ease-in-out infinite alternate; 
-    background-color: rgba(0,0,0,0.8);
+    background-color: rgba(255,255,255,1);
+    border: none;
 }
 
 .score{
     position: fixed;
+    display: flex;
     top: 15px;
-    right: 15px;
-    width: auto;
-    height: auto;
+    right: 15px;   
+    width: 200px;
+    height: 100px;
     font-family: Union-Bold;
     color: rgba(255,255,255,0.8);
-    font-size: 1rem;
+    font-size: 2rem;
+    
+}
+.score h2{ 
+  width: 60%;
+  font-family: Union-Bold;
+  color: rgba(255,255,255,0.8);
+  font-size: 2rem;
+
+}
+.score score__number{  
+  width: 40%;
+  font-family: Union-Bold;
+  color: rgba(255,255,255,0.8);
+  font-size: 8rem;  
 }
 
   @-webkit-keyframes neon2 {
@@ -171,10 +209,10 @@ table {
 
   @-webkit-keyframes neon3 {
     from {
-      box-shadow: 0 0 10px orange, 0 0 20px orange, 0 0 30px orange, 0 0 40px orange, 0 0 70px orange, 0 0 80px orange, 0 0 100px orange, 0 0 150px orange;
+      box-shadow: 0 0 10px orangered, 0 0 20px orangered, 0 0 30px orangered, 0 0 40px orangered, 0 0 70px orangered, 0 0 80px orangered, 0 0 100px orangered, 0 0 150px orangered;
     }
     to {
-      box-shadow: 0 0 5px orange, 0 0 10px orange, 0 0 15px orange, 0 0 20px orange, 0 0 35px orange, 0 0 40px orange, 0 0 50px orange, 0 0 75px orange;
+      box-shadow: 0 0 5px orangered, 0 0 10px orangered, 0 0 15px orangered, 0 0 20px orangered, 0 0 35px orangered, 0 0 40px orangered, 0 0 50px orangered, 0 0 75px orangered;
     }
 } 
   /*glow for mozilla*/
@@ -182,10 +220,10 @@ table {
  
   @-moz-keyframes neon3 {
     from {
-      box-shadow: 0 0 10px orange, 0 0 20px orange, 0 0 30px orange, 0 0 40px orange, 0 0 70px orange, 0 0 80px orange, 0 0 100px orange, 0 0 150px orange;
+      box-shadow: 0 0 10px orangered, 0 0 20px orangered, 0 0 30px orangered, 0 0 40px orangered, 0 0 70px orangered, 0 0 80px orangered, 0 0 100px orangered, 0 0 150px orangered;
     }
     to {
-      box-shadow: 0 0 5px orange, 0 0 10px orange, 0 0 15px orange, 0 0 20px orange, 0 0 35px orange, 0 0 40px orange, 0 0 50px orange, 0 0 75px orange;
+      box-shadow: 0 0 5px orangered, 0 0 10px orangered, 0 0 15px orangered, 0 0 20px orangered, 0 0 35px orangered, 0 0 40px orangered, 0 0 50px orangered, 0 0 75px orangered;
     }
   }
   
@@ -196,10 +234,10 @@ table {
   
   @keyframes neon3 {
     from {
-      box-shadow: 0 0 10px orange, 0 0 20px orange, 0 0 30px orange, 0 0 40px orange, 0 0 70px orange, 0 0 80px orange, 0 0 100px orange, 0 0 150px orange;
+      box-shadow: 0 0 10px orangered, 0 0 20px orangered, 0 0 30px orangered, 0 0 40px orangered, 0 0 70px orangered, 0 0 80px orangered, 0 0 100px orangered, 0 0 150px orangered;
     }
     to {
-      box-shadow: 0 0 5px orange, 0 0 10px orange, 0 0 15px orange, 0 0 20px orange, 0 0 35px orange, 0 0 40px orange, 0 0 50px orange, 0 0 75px orange;
+      box-shadow: 0 0 5px orangered, 0 0 10px orangered, 0 0 15px orangered, 0 0 20px orangered, 0 0 35px orangered, 0 0 40px orangered, 0 0 50px orangered, 0 0 75px orangered;
     }
   }
   

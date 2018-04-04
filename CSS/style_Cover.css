@@ -2,8 +2,9 @@
 
 @font-face {
   font-family: StolzlDisplay-Medium;
-  src: url(Fonts/StolzlDisplay-Medium) format("woff");
+  src: url(../assets/Fonts/StolzlDisplay-Medium) format("woff");
 }
+
 
 #myVideo {
   position: fixed;
