@@ -111,10 +111,28 @@ table {
   align-items: center;
   text-align: center;
   font-family: 'Union-Bold';
-  font-size: 40vh;
-  line-height: 32vh;   
+  font-size: 35vh;
+  line-height: 30vh;   
   letter-spacing: 0.1vw; 
-  z-index: 100;
+  z-index: 90;
+}
+.scoreCounter{
+  Position: fixed;
+  background: #ff5000;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-family: 'Union-Bold';
+  font-size: 90vh;
+  line-height: 30vh;   
+  letter-spacing: 0.1vw; 
+  z-index: 90;
+  color: black;
 }
 
 .hide{

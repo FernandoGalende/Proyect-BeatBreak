@@ -9,8 +9,8 @@ function BoardView(boardElement) {
 }
 
 BoardView.prototype.startAgain = function(){
-	this.screnLevel-=50;
-	this.screnLevelTime-=20;
+	this.screnLevel-=20;
+	this.screnLevelTime-=10;
 	clearInterval(this.iterateSequence);
 	board.finish = true;
 }
@@ -53,12 +53,26 @@ BoardView.prototype.lightButton = function(position) {
 BoardView.prototype.resetButton = function(position) {
 	this.buttons[position].classList.remove('board__neon___button', 'board__neon___button--dos','board__button--z-index');
 };
+BoardView.prototype.scoreCounter = function() {
+	  var i=0;
+	  document.querySelector('.scoreCounter').classList.toggle('hide');
+	  var iterateCounter = setInterval(
+	    function() {
+	          i++;
+	          document.querySelector('.scoreCounter').innerHTML = i;
+	          if(i==this.score){
+	            clearInterval(iterateCounter);
+	          }
+	    }.bind(this),
+	    10
+	  );
+	};
+
 
 BoardView.prototype.gameOver = function() {
 	document.querySelector('.gameOver').classList.remove('hide');
 };
 BoardView.prototype.win = function() {
-
 	document.querySelector('.win').classList.toggle('hide');
 };
 BoardView.prototype.playScore = function() {

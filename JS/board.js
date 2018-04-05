@@ -45,7 +45,7 @@ BoardLogic.prototype.checkSequence = function(userSequence) {
 	var result;
 	this.clicked = 0;
 	for (var i = 0; i < this.userSequence.length; i++) {
-		if (this.userSequence[i] == sequence[i]) {
+		if (this.userSequence[i] === sequence[i]) {
 			if (this.userSequence.length === this.sequence.length) {
 				setTimeout(
 					function() {
@@ -72,7 +72,25 @@ BoardLogic.prototype.checkSequence = function(userSequence) {
 			}
 		} else if (this.userSequence[i] !== sequence[i]) {
 			result = false;
-			view.gameOver();
+			setTimeout(
+				function() {
+					view.scoreCounter();
+				}.bind(this),
+				6000
+			);
+			setTimeout(
+				function() {
+					view.scoreCounter();
+				}.bind(this),
+				100
+			);
+			setTimeout(
+				function() {
+					view.gameOver();
+				}.bind(this),
+				5900
+			);
+			
 			break;
 		}
 	}
