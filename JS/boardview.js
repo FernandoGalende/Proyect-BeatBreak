@@ -5,6 +5,7 @@ function BoardView(boardElement) {
 	this.screnLevelTime = 700;
 	this.iterateSequence;
 	this.attachListeners();
+	this.score = 0;
 }
 
 BoardView.prototype.startAgain = function(){
@@ -19,9 +20,9 @@ BoardView.prototype.attachListeners = function() {
 		return function() {
 			board.addToUserSequence(i);
 			board.clicked++;
-			var audioArray = [ './assets/Audio/3.mp3', './assets/Audio/3.mp3', './assets/Audio/3.mp3', './assets/Audio/3.mp3'];
+			var audioArray = [ './assets/Audio/3.mp3'];
 			var a = new Audio();
-			a.src = audioArray[i];
+			a.src = audioArray[0];
 			a.play();
 			view.userLightButton(i);
 			if (board.clicked === board.boardLevel) {
@@ -61,7 +62,7 @@ BoardView.prototype.win = function() {
 	document.querySelector('.win').classList.toggle('hide');
 };
 BoardView.prototype.playScore = function() {
-	document.querySelector('.score__number').innerHTML = board.score;
+	document.querySelector('.score__number').innerHTML = this.score;
 };
 
 BoardView.prototype.playSequence = function(sequence) {

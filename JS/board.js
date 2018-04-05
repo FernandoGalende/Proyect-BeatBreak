@@ -1,17 +1,16 @@
-function BoardLogic(sequence) {
+function BoardLogic(a) {
 	this.sequence = this.randomGame();
 	this.level = 1;
 	this.userSequence = [];
 	this.clicked = 0;
 	this.boardLevel = 1;
-	this.call = false;
-	this.score = 0;
+	this.call = false;	
 	this.finish = false;
 }
 
 BoardLogic.prototype.randomGame = function() {
 	var sequence = [];
-	for (var i = 0; i < 10; i++) {
+	for (var i = 0; i < 3; i++) {
 		sequence.push(Math.round(Math.random() * 7));
 	}
 	return sequence;
@@ -36,7 +35,8 @@ BoardLogic.prototype.getSequence = function() {
 	return this.getLevelSequence(this.level);
 };
 BoardLogic.prototype.addScore = function() {
-	this.score += 17;
+	console.log(view.score)
+	view.score +=17;	
 	view.playScore();
 };
 
@@ -63,11 +63,11 @@ BoardLogic.prototype.checkSequence = function(userSequence) {
 					function() {
 						view.startAgain();
 					}.bind(this),
-					2600
+					2000
 				);
 			} else {
 				view.playSequence(board.getLevelSequence());
-				board.addScore();
+				this.addScore();
 				result = true;
 			}
 		} else if (this.userSequence[i] !== sequence[i]) {

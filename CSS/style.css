@@ -60,6 +60,7 @@ table {
 .board {
   display: flex;
   flex-wrap: wrap;
+
 }
 .board__button {
   width: 25%;
@@ -103,7 +104,7 @@ table {
     text-align: center;
     font-family: Union-Bold;
     font-size: 40vh;
-    line-height: 35vh;   
+    line-height: 32vh;   
     letter-spacing: 0.1vw; 
     z-index: 100;
 }
@@ -120,7 +121,7 @@ table {
   text-align: center;
   font-family: Union-Bold;
   font-size: 40vh;
-  line-height: 35vh;   
+  line-height: 32vh;   
   letter-spacing: 0.1vw; 
   z-index: 100;
 }
