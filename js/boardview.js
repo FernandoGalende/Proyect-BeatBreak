@@ -8,19 +8,19 @@ function BoardView(boardElement) {
 	this.score = 0;
 }
 
-BoardView.prototype.startAgain = function(){
-	this.screnLevel-=20;
-	this.screnLevelTime-=10;
+BoardView.prototype.startAgain = function() {
+	this.screnLevel -= 20;
+	this.screnLevelTime -= 10;
 	clearInterval(this.iterateSequence);
 	board.finish = true;
-}
+};
 
 BoardView.prototype.attachListeners = function() {
 	var functionGenerator = function(i) {
 		return function() {
 			board.addToUserSequence(i);
 			board.clicked++;
-			var audioArray = [ './assets/Audio/3.mp3'];
+			var audioArray = [ './assets/Audio/3.mp3' ];
 			var a = new Audio();
 			a.src = audioArray[0];
 			a.play();
@@ -37,7 +37,7 @@ BoardView.prototype.attachListeners = function() {
 	}
 };
 BoardView.prototype.userLightButton = function(position) {
-	this.buttons[position].classList.add('board__neon___button--dos','board__button--z-index');
+	this.buttons[position].classList.add('board__neon___button--dos', 'board__button--z-index');
 	setTimeout(
 		function() {
 			this.resetButton(position);
@@ -51,23 +51,26 @@ BoardView.prototype.lightButton = function(position) {
 };
 
 BoardView.prototype.resetButton = function(position) {
-	this.buttons[position].classList.remove('board__neon___button', 'board__neon___button--dos','board__button--z-index');
+	this.buttons[position].classList.remove(
+		'board__neon___button',
+		'board__neon___button--dos',
+		'board__button--z-index'
+	);
 };
 BoardView.prototype.scoreCounter = function() {
-	  var i=0;
-	  document.querySelector('.scoreCounter').classList.toggle('hide');
-	  var iterateCounter = setInterval(
-	    function() {
-	          i++;
-	          document.querySelector('.scoreCounter').innerHTML = i;
-	          if(i==this.score){
-	            clearInterval(iterateCounter);
-	          }
-	    }.bind(this),
-	    10
-	  );
-	};
-
+	var i = 0;
+	document.querySelector('.scoreCounter').classList.toggle('hide');
+	var iterateCounter = setInterval(
+		function() {
+			i++;
+			document.querySelector('.scoreCounter').innerHTML = i;
+			if (i == this.score) {
+				clearInterval(iterateCounter);
+			}
+		}.bind(this),
+		10
+	);
+};
 
 BoardView.prototype.gameOver = function() {
 	document.querySelector('.gameOver').classList.remove('hide');

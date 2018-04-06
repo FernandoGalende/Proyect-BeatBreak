@@ -4,13 +4,13 @@ function BoardLogic(a) {
 	this.userSequence = [];
 	this.clicked = 0;
 	this.boardLevel = 1;
-	this.call = false;	
+	this.call = false;
 	this.finish = false;
 }
 
 BoardLogic.prototype.randomGame = function() {
 	var sequence = [];
-	for (var i = 0; i < 3; i++) {
+	for (var i = 0; i < 5; i++) {
 		sequence.push(Math.round(Math.random() * 7));
 	}
 	return sequence;
@@ -35,8 +35,8 @@ BoardLogic.prototype.getSequence = function() {
 	return this.getLevelSequence(this.level);
 };
 BoardLogic.prototype.addScore = function() {
-	console.log(view.score)
-	view.score +=17;	
+	console.log(view.score);
+	view.score += 17;
 	view.playScore();
 };
 
@@ -72,25 +72,34 @@ BoardLogic.prototype.checkSequence = function(userSequence) {
 			}
 		} else if (this.userSequence[i] !== sequence[i]) {
 			result = false;
-			setTimeout(
-				function() {
-					view.scoreCounter();
-				}.bind(this),
-				6000
-			);
-			setTimeout(
-				function() {
-					view.scoreCounter();
-				}.bind(this),
-				100
-			);
-			setTimeout(
-				function() {
-					view.gameOver();
-				}.bind(this),
-				5900
-			);
-			
+			if (view.score > 0) {
+				setTimeout(
+					function() {
+						view.scoreCounter();
+					}.bind(this),
+					6000
+				);
+				setTimeout(
+					function() {
+						view.scoreCounter();
+					}.bind(this),
+					100
+				);
+				setTimeout(
+					function() {
+						view.gameOver();
+					}.bind(this),
+					5900
+				);
+			} else if (view.score === 0) {
+				setTimeout(
+					function() {
+						view.gameOver();
+					}.bind(this),
+					5900
+				);
+			}
+
 			break;
 		}
 	}

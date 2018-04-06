@@ -1,0 +1,70 @@
+@font-face {
+  font-family: 'Union-Bold';
+  src: local('Union Bold'), local('Union-Bold'),
+      url('/assets/Fonts/Union-Bold.woff2') format('woff2'),
+      url('/assets/Fonts/Union-Bold.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'StolzlDisplay-Medium';
+  src: local('Stolzl Display Medium'), local('StolzlDisplay-Medium'),
+      url('/assets/Fonts/StolzlDisplay-Medium.woff2') format('woff2'),
+      url('/assets/Fonts/StolzlDisplay-Medium.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+*{
+  margin: 0;
+}
+.wrap{
+  display: flex;
+  flex-direction: column-reverse; 
+  justify-content: flex-start;
+  flex-wrap: wrap; 
+}
+.columnA{
+  display: flex;
+  display: inline-block;
+  flex-direction: column; 
+  width: 50%;
+  height: 100%;
+  background-color: blueviolet;  
+  border: 0;
+
+}
+.columnB{
+  display: flex;
+  display: inline-block;
+  flex-direction: column; 
+  width: 50%;
+  height: 100%;
+  background-color: red;
+  border: 0;
+}
+/* columnA h1{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+   width: 50%;  
+}
+columnB h1{
+  display: flex;
+  justify-content: center;
+  width: 5%;
+}
+ columnA p {
+  display: flex;
+  justify-content: center;
+  width: 50%;
+}
+
+columnB p {
+  font-family: 'Union-Bold';
+  text-align: left;
+} */
+img{
+  width: auto;
+  height: 30px;
+}
