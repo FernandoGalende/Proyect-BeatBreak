@@ -69,10 +69,11 @@ table {
 .board {
   display: flex;
   flex-wrap: wrap;
-}
+ }
+ 
 .board__button {
   width: 25%;
-  height: 50vh;
+  height: 25vh;
   background: black;
   border: 1px solid orangered;
   box-sizing: border-box;
@@ -169,7 +170,7 @@ table {
     
 }
 .score h2{ 
-  width: 60%;
+  width: 40%;
   font-family: 'Union-Bold';
   color:rgba(255, 255, 200, 0.8);
   font-size: 2rem;

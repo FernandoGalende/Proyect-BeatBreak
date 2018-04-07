@@ -10,8 +10,8 @@ function BoardLogic(a) {
 
 BoardLogic.prototype.randomGame = function() {
 	var sequence = [];
-	for (var i = 0; i < 5; i++) {
-		sequence.push(Math.round(Math.random() * 7));
+	for (var i = 0; i < 8; i++) {
+		sequence.push(Math.round(Math.random() * 15));
 	}
 	return sequence;
 };
@@ -99,7 +99,6 @@ BoardLogic.prototype.checkSequence = function(userSequence) {
 					5900
 				);
 			}
-
 			break;
 		}
 	}
