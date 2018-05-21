@@ -11,8 +11,6 @@ function BoardLogic(a) {
 BoardLogic.prototype.randomGame = function() {
 	var sequence = [];
 	for (var i = 0; i < 8; i++) {
-		//Si lo quiero génerico neceisto quitar ese 8. Mejor lo recojo del DOM
-		//Referencia a Boardview linea 35
 		sequence.push(Math.round(Math.random() * 15));
 	}
 	return sequence;
@@ -24,7 +22,6 @@ BoardLogic.prototype.getLevelSequence = function(level) {
 		this.call = true;
 		return this.sequence.slice(0, sequenceEnd);
 	} else {
-		// Probar a sustituir por if(this.call == true)
 		var sequenceEnd = this.level + 1;
 		return this.sequence.slice(0, sequenceEnd);
 	}
@@ -43,11 +40,6 @@ BoardLogic.prototype.addScore = function() {
 	view.playScore();
 };
 
-// BoardLogic.prototype.chickenWinner = function (){
-// 	setTimeout( function() { view.win()}.bind(this),2000);
-// 	setTimeout( function() { view.win()}.bind(this),100);
-// 	setTimeout( function() { view.startAgain()}.bind(this),2000);
-// }
 
 BoardLogic.prototype.checkSequence = function(userSequence) {
 	var sequence = this.sequence;
@@ -56,7 +48,6 @@ BoardLogic.prototype.checkSequence = function(userSequence) {
 	for (var i = 0; i < this.userSequence.length; i++) {
 		if (this.userSequence[i] === sequence[i]) {
 			if (this.userSequence.length === this.sequence.length) {
-				//this.chickenWinner()
 				setTimeout( function() { view.win()}.bind(this),2000);
 				setTimeout( function() { view.win()}.bind(this),100);
 				setTimeout( function() { view.startAgain()}.bind(this),2000);
