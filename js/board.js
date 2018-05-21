@@ -6,11 +6,13 @@ function BoardLogic(a) {
 	this.boardLevel = 1;
 	this.call = false;
 	this.finish = false;
-}
+};
 
 BoardLogic.prototype.randomGame = function() {
 	var sequence = [];
 	for (var i = 0; i < 8; i++) {
+		//Si lo quiero génerico neceisto quitar ese 8. Mejor lo recojo del DOM
+		//Referencia a Boardview linea 35
 		sequence.push(Math.round(Math.random() * 15));
 	}
 	return sequence;
@@ -22,6 +24,7 @@ BoardLogic.prototype.getLevelSequence = function(level) {
 		this.call = true;
 		return this.sequence.slice(0, sequenceEnd);
 	} else {
+		// Probar a sustituir por if(this.call == true)
 		var sequenceEnd = this.level + 1;
 		return this.sequence.slice(0, sequenceEnd);
 	}
@@ -34,11 +37,17 @@ BoardLogic.prototype.addLevel = function() {
 BoardLogic.prototype.getSequence = function() {
 	return this.getLevelSequence(this.level);
 };
+
 BoardLogic.prototype.addScore = function() {
-	console.log(view.score);
 	view.score += 17;
 	view.playScore();
 };
+
+// BoardLogic.prototype.chickenWinner = function (){
+// 	setTimeout( function() { view.win()}.bind(this),2000);
+// 	setTimeout( function() { view.win()}.bind(this),100);
+// 	setTimeout( function() { view.startAgain()}.bind(this),2000);
+// }
 
 BoardLogic.prototype.checkSequence = function(userSequence) {
 	var sequence = this.sequence;
@@ -47,24 +56,10 @@ BoardLogic.prototype.checkSequence = function(userSequence) {
 	for (var i = 0; i < this.userSequence.length; i++) {
 		if (this.userSequence[i] === sequence[i]) {
 			if (this.userSequence.length === this.sequence.length) {
-				setTimeout(
-					function() {
-						view.win();
-					}.bind(this),
-					2000
-				);
-				setTimeout(
-					function() {
-						view.win();
-					}.bind(this),
-					100
-				);
-				setTimeout(
-					function() {
-						view.startAgain();
-					}.bind(this),
-					2000
-				);
+				//this.chickenWinner()
+				setTimeout( function() { view.win()}.bind(this),2000);
+				setTimeout( function() { view.win()}.bind(this),100);
+				setTimeout( function() { view.startAgain()}.bind(this),2000);
 			} else {
 				view.playSequence(board.getLevelSequence());
 				this.addScore();
@@ -73,12 +68,7 @@ BoardLogic.prototype.checkSequence = function(userSequence) {
 		} else if (this.userSequence[i] !== sequence[i]) {
 			result = false;
 			if (view.score > 0) {
-				setTimeout(
-					function() {
-						view.scoreCounter();
-					}.bind(this),
-					6000
-				);
+				setTimeout( function() {view.scoreCounter()}.bind(this),6000);
 				setTimeout(
 					function() {
 						view.scoreCounter();

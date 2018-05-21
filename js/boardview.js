@@ -6,7 +6,7 @@ function BoardView(boardElement) {
 	this.iterateSequence;
 	this.attachListeners();
 	this.score = 0;
-}
+};
 
 BoardView.prototype.startAgain = function() {
 	this.screnLevel -= 20;
@@ -36,6 +36,7 @@ BoardView.prototype.attachListeners = function() {
 		this.buttons[i].addEventListener('click', functionGenerator(i));
 	}
 };
+
 BoardView.prototype.userLightButton = function(position) {
 	this.buttons[position].classList.add('board__neon___button--dos', 'board__button--z-index');
 	setTimeout(
@@ -57,6 +58,7 @@ BoardView.prototype.resetButton = function(position) {
 		'board__button--z-index'
 	);
 };
+
 BoardView.prototype.scoreCounter = function() {
 	var i = 0;
 	document.querySelector('.scoreCounter').classList.toggle('hide');
@@ -75,9 +77,11 @@ BoardView.prototype.scoreCounter = function() {
 BoardView.prototype.gameOver = function() {
 	document.querySelector('.gameOver').classList.remove('hide');
 };
+
 BoardView.prototype.win = function() {
 	document.querySelector('.win').classList.toggle('hide');
 };
+
 BoardView.prototype.playScore = function() {
 	document.querySelector('.score__number').innerHTML = this.score;
 };

@@ -43,27 +43,7 @@
   background-color: red;
   border: 0;
 }
-/* columnA h1{
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-   width: 50%;  
-}
-columnB h1{
-  display: flex;
-  justify-content: center;
-  width: 5%;
-}
- columnA p {
-  display: flex;
-  justify-content: center;
-  width: 50%;
-}
 
-columnB p {
-  font-family: 'Union-Bold';
-  text-align: left;
-} */
 img{
   width: auto;
   height: 30px;
