@@ -20,7 +20,7 @@ BoardView.prototype.attachListeners = function() {
 		return function() {
 			board.addToUserSequence(i);
 			board.clicked++;
-			var audioArray = [ './assets/Audio/3.mp3' ];
+			var audioArray = [ './assets/Audio/laser.mp3' ];
 			var a = new Audio();
 			a.src = audioArray[0];
 			a.play();
